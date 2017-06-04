@@ -64,6 +64,21 @@ $ git checkout remote_branch
 ```bash
 $ git merge branch_name
 ```
+### Deleting Local Branch
+```
+$ git branch -d <branch-name>
+$ git branch -D <brach-name> # - force delete
+```
+### Deleting Remote Branch
+```
+$ git push origin :<branch-name>
+$ git push origin --delete <branch-name>
+```
+### Pruning local tracking branches
+```
+$ git fetch -p <remote-branch> # single branch
+$ git fetch -p # Mutiple remote tracking deletes
+```
 ### Getting My Codes Status
 ```bash
 $ git status
