@@ -339,6 +339,14 @@ $ git stash clear
 ```
 This clear your stash stack.
 
+### Rename a Branch
+```bash
+$ git branch -m "new_branch_name" # If you are on the branch locally
+$ git branch -m old-name new-name # If you are not on the branch to rename
+$ git push origin :old_branch # Delete the old branch
+$ git push origin HEAD # Push the renamed branch to origin
+```
+
 ## DANGER WILL ROBINSON!!
 This is when things go awry and you need some help.
 ### Revert a bunch of commits
