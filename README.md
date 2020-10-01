@@ -74,6 +74,32 @@ $ git branch -D <brach-name> # - force delete
 $ git push origin :<branch-name>
 $ git push origin --delete <branch-name>
 ```
+### Creating a tag
+```
+$ git tag V1.0
+$ git tag -a v1.1 -m "Creating version 1.1" # Creates a tag with a message
+$ git tag -a v1.2 9fceb02 -m "Creating tag for 1.2 from commit hash"
+```
+### Showing tags
+```
+$ git tag
+$ git tag -l "v1.8.5*" # show tags of a particular pattern
+```
+### Saving Tags
+```
+$ git push origin v1.1 # Save tag to remote
+$ git push origin --tags # Save all local tags to remote
+```
+### Deleting Tags
+```
+$ git tag -d v1.1 # Delete local tag
+$ git push origin --delete v1.1 # Delete remote tag
+```
+### Checking out Tags
+```
+$ git checkout v1.1 # Check out tag in in “detached HEAD” state
+$ git checkout -b version2 v2.0.0 # Checkout tag to branch
+```
 ### Pruning local tracking branches
 ```
 $ git fetch -p <remote-branch> # single branch
